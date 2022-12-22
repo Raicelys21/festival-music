@@ -1,0 +1,60 @@
+.header{
+    background-color: $verde;
+
+    .contenido-header{
+        padding: $separacion / 2 0rem;
+
+        @include telefono{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    } 
+
+    h1{
+        color: $blanco;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+
+        @include tablet{
+             margin-bottom: 0rem;
+            font-size: 4rem;
+        }
+        @include telefono{
+            font-size: 4rem;
+        }
+    }
+
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .3rem .4rem #444;
+    }
+}
+
+.navegacion-principal{
+    display: flex;
+    justify-content: center;
+
+    a{
+        color: $blanco;
+        font-size: 1.6rem;
+        margin-right: 2rem;
+
+        &:last-of-type{
+            margin-right: none;
+        }
+
+        @include tablet{
+            margin-bottom: 0rem;
+           font-size: 2rem;
+       }
+       @include telefono{
+           font-size: 2rem;
+       }
+        &:hover{
+            color: $amarillo;
+        }
+    }
+}
